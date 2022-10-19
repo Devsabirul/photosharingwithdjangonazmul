@@ -1,0 +1,406 @@
+body {
+    background-color: #fdfdfd;
+}
+
+form.search_ input {
+    margin-left: 50px;
+    border-radius: 20px;
+    background: #eeeeee;
+    border: none;
+    padding: 10px;
+}
+
+.alert_ i {
+    font-size: 25px;
+    margin-right: 35px;
+    color: gray;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.account {
+    height: 35px;
+    width: 35px;
+    background: #818181;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.account img {
+    width: 35px;
+    /* height: 100%; */
+}
+
+/* logo  */
+a.navbar-brand {
+    width: 10% !important;
+    display: inline-block;
+}
+
+a.navbar-brand img {
+    width: 100%;
+}
+
+/* CARd  */
+.container_ {
+    columns: 5;
+    column-gap: 10px;
+    margin-top: 90px !important;
+}
+
+.dashboard_container_ {
+    margin-top: 100px;
+}
+
+/* dashboard  */
+.profile_pic {
+    width: 130px;
+    height: 130px;
+    background: #565656;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile_pic img {
+    width: 100%;
+}
+
+.profile_picture {
+    height: 250px;
+    width: 250px;
+    background: gray;
+    border-radius: 50%;
+    border: 2px solid #CC0000;
+    overflow: hidden;
+}
+
+.profile_picture img {
+    width: 250px;
+    /* height: 100%; */
+}
+
+.btns_ {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+
+.navs {
+    width: 100%;
+    padding: 20px;
+}
+
+.create_post {
+    width: 70%;
+    height: auto;
+    margin-top: 25px;
+    padding: 20px;
+    box-shadow: 0px 0px 4px;
+    border-radius: 12px;
+}
+
+.upload_img {
+    width: 100%;
+    height: 330px;
+    background: #ddd;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+form.delete {
+    margin-left: 5px;
+}
+
+a.single_page_link {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: auto;
+    padding: 41px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 1px 0px;
+}
+
+a.back_link i {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 25px;
+}
+
+button.info_delete {
+    background: none;
+    border: none;
+}
+
+.single_imgs img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.input_type input {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    border-bottom: 3px solid gray;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.input_type input:focus {
+    outline: none;
+    border-bottom: 3px solid #CC0000;
+}
+
+.box {
+    margin-bottom: 15px;
+    break-inside: avoid;
+}
+
+.box a {
+    cursor: zoom-in;
+}
+
+.box img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0px 0px 1px 0px;
+    z-index: 0px;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    background: #00000042;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    color: white;
+    z-index: 1;
+    border-radius: 12px;
+    opacity: 0;
+    cursor: zoom-in;
+}
+
+.info:hover {
+    opacity: 1;
+    transition: all .2s;
+}
+
+.info_download {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.upload_photo_info i {
+    font-size: 20px;
+    padding: 15px;
+    background: #767676;
+    border-radius: 50%;
+    color: white;
+    margin-bottom: 17px;
+}
+
+/* .upload_photo_info {
+    padding: 15px;
+    border: 2px dotted gray;
+    height: 50vh;
+} */
+
+.uploaded_info {
+    margin-left: 5px;
+    width: 60px;
+    height: 60px;
+    background: gray;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 35px;
+    border: 2px solid red;
+}
+
+.uploaded_info img {
+    width: 100%;
+}
+
+/* remove input filed label  */
+.remove_t {
+    color: transparent;
+}
+
+.remove_t:after {
+    color: black;
+    content: "Replase Picture";
+}
+
+.remove_t:focus {
+    color: transparent;
+}
+
+/* end remove input filed label  */
+
+/* preview img  */
+.upload_photo_info {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    
+}
+
+img#preview_img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: none;
+}
+
+/* end preview img  */
+
+.heading_info {
+    line-height: 5px;
+    margin-left: 5px;
+}
+
+.heading_info a {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.single_info h1 {
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.btn_ {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    border-radius: 50px;
+}
+
+.info_download i {
+    padding: 10px;
+    background: white;
+    color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.commnet_section {
+    width: 90%;
+    margin-top: 25px !important;
+}
+
+.card_img {
+    position: relative;
+}
+
+.single_info p {
+    margin-left: 10px;
+    text-align: justify;
+    margin-top: 30px;
+}
+
+.profile_section {
+    margin-top: 25px;
+    padding: 10px;
+}
+
+textarea#discription {
+    border: 2px solid gray;
+    margin-top: 25px;
+}
+
+.input_type {
+    margin-top: -20px;
+}
+
+.about_add_section {
+    width: 66%;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0px 0px 2px 0px;
+    border-radius: 5px;
+}
+
+.about_add_section h4 {
+    margin-bottom: 30px;
+    border-bottom: 3px solid gray;
+    font-weight: 600;
+    color: gray;
+}
+
+.content_ {
+    box-shadow: 0px 0px 1px 0px;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+/* responsive  */
+@media only screen and (max-width: 800px) {
+    a.navbar-brand {
+        width: 25% !important;
+    }
+
+    .container_ {
+        columns: 3;
+        column-gap: 10px;
+    }
+
+    .info_download i {
+        padding: 6px;
+        font-size: 10px;
+    }
+
+    .infos {
+        text-align: center;
+    }
+
+    .create_post {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    label.upload_img {
+        width: 70% !important;
+        margin: 0 auto !important;
+    }
+
+    button.btn_save {
+        margin-top: 15px;
+    }
+
+    .upload_photo_info {
+        border: none;
+    }
+
+    .btn_sm {
+        margin-top: 15px;
+    }
+
+    .input_type {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width:1000) {
+    .upload_photo_info {
+        border: none;
+    }
+}

@@ -1,0 +1,67 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}
+{% for title in about %} Single Post | {{title.name}} {% endfor %}
+{% endblock title %}
+{% block logo %}
+{% for logo in about %}
+<img src="{{logo.logo.url}}" alt="">
+{% endfor %}
+{% endblock logo %}
+{% block profile %}
+{% for profile in about %}
+<img src="{{profile.photo.url}}" alt="profile">
+{% endfor %}
+{% endblock profile %}
+{% block dropdown_nav %}
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Community
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Blogs</a></li>
+    </ul>
+</li>
+{% endblock dropdown_nav %}
+{% block body %}
+<div class="dashboard_container_ container">
+    <div class="wrap">
+        <a href="/" class="back_link">
+            <i class="fa-solid fa-circle-left"></i>
+        </a>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="single_imgs">
+                    <img src="{{content.picture.url}}" alt="{{content.picture}}">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="single_info">
+                    {% for about in about %}
+                    <p>Uploaded by <span> <b>{{about.name}}</b> </span> </p>
+                    <h1>{{content.title}}</h1>
+                    <p>{{content.discription}}</p>
+                    <div class="d-flex align-items-center">
+                        <div class="uploaded_info">
+                            <img src="{{about.photo.url}}" alt="Profile">
+                        </div>
+                        <div class="heading_info mt-4 ml-5">
+                            <h5>{{about.name}}</h5>
+                            <a href="{{about.followlink}}" target="_blank">Follow Now</a>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+
+
+                <div class="commnet_section mt-3">
+                    <div class="fb-comments" data-href="http://127.0.0.1:8000/pin/{{content.slug}}" data-width="1"
+                        data-numposts="5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock body %}

@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}
+{% for title in about %} Home | {{title.name}} {% endfor %}
+{% endblock title %}
+{% block logo %}
+{% for logo in about %}
+<img src="{{logo.logo.url}}" alt="">
+{% endfor %}
+{% endblock logo %}
+{% block dropdown_nav %}
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Community
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Blogs</a></li>
+    </ul>
+</li>
+{% endblock dropdown_nav %}
+{% block profile %}
+{% for profile in about %}
+<img src="{{profile.photo.url}}" alt="profile">
+{% endfor %}
+{% endblock profile %}
+{% block body %}
+{% if content|length == 0 %}
+<div class="post-alert_ text-center">
+    <h4>No Post Available</h4>
+</div>
+{% else %}
+<div class="container-fluid container_">
+    {% for content in content %}
+    <div class="box">
+        <div class="card_img">
+            <img src="{{content.picture.url}}" alt="loading..">
+            <div class="info">
+                <a href="{% url 'single_post' content.slug %}" class="d-block single_page_link"></a>
+                <div class="btn btn_ btn-sm btn-danger m-2">Save</div>
+                <div class="info_download">
+                    <a href="{{content.picture.url}}" download>
+                        <i class="fa-solid fa-download"></i>
+                    </a>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+        </div>
+        <div class="card_title_ mt-2">
+            <h6 class="title_">{{content.title}}</h6>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock body %}

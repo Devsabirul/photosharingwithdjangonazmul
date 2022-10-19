@@ -1,0 +1,63 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}
+{% for title in about %} Create Post | {{title.name}} {% endfor %}
+{% endblock title %}
+{% block logo %}
+{% for logo in about %}
+<img src="{{logo.logo.url}}" alt="">
+{% endfor %}
+{% endblock logo %}
+{% block profile %}
+{% for profile in about %}
+<img src="{{profile.photo.url}}" alt="profile">
+{% endfor %}
+{% endblock profile %}
+{% block dropdown_nav %}
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Created
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="create-post">Create Post</a></li>
+    </ul>
+</li>
+{% endblock dropdown_nav %}
+{% block body %}
+<div class="container container_ d-flex justify-content-center">
+    <div class="create_post">
+        <p> Create a Post: </p>
+        <form action="create-post" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="">
+                        <label for="profile_pic"
+                            class="d-block upload_img d-flex justify-content-center align-items-center">
+                            <div class="upload_photo_info text-center d-flex justify-content-center align-items-center">
+                                <div class="preview_imgs">
+                                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                    <p>Drag and drop or click to upload</p>
+                                </div>
+                                <img id="preview_img">
+                            </div>
+                        </label>
+                        <input type="file" name="profile_pic" id="profile_pic" class="d-none" required>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="input_type">
+                        <input type="text" maxlength="23" name="title" placeholder="Add title" required>
+                    </div>
+                    <div class="form-group mt-2">
+                        <textarea class="form-control" id="discription" name="discription" rows="8"
+                            placeholder="Descriptions"></textarea>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-sm btn-primary btn_save">Save Post</button>
+            <a class="btn btn-sm btn-secondary btn_sm " href="/dashboard/">Back to profile</a>
+        </form>
+    </div>
+</div>
+{% endblock body %}
