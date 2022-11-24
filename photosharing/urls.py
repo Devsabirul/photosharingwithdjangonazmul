@@ -7,6 +7,6 @@ urlpatterns = [
     path('ss-admin/', admin.site.urls),
     path('', include('core.urls')),
     path('dashboard/', include('dashboard.urls')),
-    path('NH-admin/', include('login.urls')),
+    path('nh-admin/', include('login.urls')),
     path('logout', user_logout, name="user_logout"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
