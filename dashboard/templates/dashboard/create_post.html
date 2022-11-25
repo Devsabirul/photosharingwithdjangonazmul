@@ -27,7 +27,7 @@
 <div class="container container_ d-flex justify-content-center">
     <div class="create_post">
         <p> Create a Post: </p>
-        <form action="create-post" method="post" enctype="multipart/form-data">
+        <form id="post_form" action="create-post" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="row">
                 <div class="col-lg-5">
@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="input_type">
-                        <input type="text" maxlength="23" name="title" placeholder="Add title" required>
+                        <input type="text" id="title" maxlength="23" name="title" placeholder="Add title" required>
                     </div>
                     <div class="form-group mt-2">
                         <textarea class="form-control" id="discription" name="discription" rows="8"
@@ -55,9 +55,26 @@
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-sm btn-primary btn_save">Save Post</button>
+            <button type="submit" disabled="disabled" id="post_btn" class="btn btn-sm btn-primary btn_save">Save
+                Post</button>
             <a class="btn btn-sm btn-secondary btn_sm " href="/dashboard/">Back to profile</a>
         </form>
     </div>
 </div>
+<script type="text/javascript">
+    const post_form = document.getElementById("post_form");
+    const title = document.getElementById("title");
+    const pic = document.getElementById("profile_pic");
+    const post_btn = document.getElementById("post_btn");
+    post_form.addEventListener('input', () => {
+        if (title.value.length > 0 && pic.value.length > 0) {
+            post_btn.removeAttribute('disabled');
+        } else {
+            post_btn.setAttribute('disabled', 'disabled');
+        }
+    });
+    post_btn.addEventListener('click', () => {
+        post_btn.innerText = "Uploading..."
+    });
+</script>
 {% endblock body %}
