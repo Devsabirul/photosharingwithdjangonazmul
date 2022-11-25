@@ -23,7 +23,7 @@ def create_post(request):
             post.save()
         return render(request, 'dashboard/create_post.html', {'about': about})
     else:
-        return redirect('/NH-admin')
+        return redirect('/nh-admin')
 
 
 def update_post(request, id):
@@ -40,7 +40,7 @@ def update_post(request, id):
             fm = Post_form(instance=get_id)
         return render(request, 'dashboard/update_post.html', {'about': about, 'form': fm})
     else:
-        return redirect('/NH-admin')
+        return redirect('/nh-admin')
 
 
 def profile(request):
@@ -62,7 +62,7 @@ def profile(request):
             }
             return render(request, 'dashboard/profile.html', context)
     else:
-        return redirect('/NH-admin')
+        return redirect('/nh-admin')
 
 
 def add_profile(request):
@@ -81,7 +81,7 @@ def add_profile(request):
         else:
             return redirect('/dashboard')
     else:
-        return redirect('/NH-admin')
+        return redirect('/nh-admin')
 
 
 def upload_profile(request):
@@ -97,7 +97,7 @@ def upload_profile(request):
             form = About_form(instance=get_id)
         return render(request, 'dashboard/upload_profile.html', {'about': about, 'form': form})
     else:
-        return redirect('/NH-admin')
+        return redirect('/nh-admin')
 
 
 def change_password(request):
@@ -112,7 +112,7 @@ def change_password(request):
             fm = HandelPasswordForm(user=request.user)
         return render(request, 'dashboard/change_password.html', {'form': fm, 'about': about})
     else:
-        return redirect("/NH-admin")
+        return redirect("/nh-admin")
 
 
 def delete(request):
