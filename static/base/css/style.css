@@ -254,7 +254,7 @@ button.info_delete {
     width: 100%;
     height: 100%;
     padding: 30px;
-    
+
 }
 
 img#preview_img {
@@ -290,6 +290,12 @@ img#preview_img {
     right: 0px;
     top: 5px;
     border-radius: 50px;
+}
+
+button#post_btn {
+    outline: none;
+    border: none;
+    box-shadow: none;
 }
 
 .info_download i {
